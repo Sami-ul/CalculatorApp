@@ -1,4 +1,5 @@
 # CalculatorApp
+![image](https://user-images.githubusercontent.com/72280649/150626155-38a07da0-2482-4e98-a94f-f799d7a3ce05.png)
 ## Setup for using
 - Go to releases and download the executable to just run it and test it out
 ## Setup to look at code
