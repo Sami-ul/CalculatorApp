@@ -23,6 +23,7 @@ namespace CalculatorApp
         private string operation;
         private float n1, n2;
         private bool resultOn = false;
+        private bool errorOn = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -33,99 +34,110 @@ namespace CalculatorApp
         }
         private void SevenPressed(object sender, RoutedEventArgs e)
         {
-            if (resultOn)
+            if (resultOn || errorOn)
             {
                 resultOn = false;
                 numberInput.Text = "";
+                errorOn = false;
             }
             numberInput.Text += "7";
         }
         private void EightPressed(object sender, RoutedEventArgs e)
         {
-            if (resultOn)
+            if (resultOn || errorOn)
             {
                 resultOn = false;
                 numberInput.Text = "";
+                errorOn = false;
             }
             numberInput.Text += "8";
         }
         private void NinePressed(object sender, RoutedEventArgs e)
         {
-            if (resultOn)
+            if (resultOn || errorOn)
             {
                 resultOn = false;
                 numberInput.Text = "";
+                errorOn = false;
             }
             numberInput.Text += "8";
         }
         private void FourPressed(object sender, RoutedEventArgs e)
         {
-            if (resultOn)
+            if (resultOn || errorOn)
             {
                 resultOn = false;
                 numberInput.Text = "";
+                errorOn = false;
             }
             numberInput.Text += "4";
         }
         private void FivePressed(object sender, RoutedEventArgs e)
         {
-            if (resultOn)
+            if (resultOn || errorOn)
             {
                 resultOn = false;
                 numberInput.Text = "";
+                errorOn = false;
             }
             numberInput.Text += "5";
         }
         private void SixPressed(object sender, RoutedEventArgs e)
         {
-            if (resultOn)
+            if (resultOn || errorOn)
             {
                 resultOn = false;
                 numberInput.Text = "";
+                errorOn = false;
             }
             numberInput.Text += "6";
         }
         private void OnePressed(object sender, RoutedEventArgs e)
         {
-            if (resultOn)
+            if (resultOn || errorOn)
             {
                 resultOn = false;
                 numberInput.Text = "";
+                errorOn = false;
             }
             numberInput.Text += "1";
         }
         private void TwoPressed(object sender, RoutedEventArgs e)
         {
-            if (resultOn)
+            if (resultOn || errorOn)
             {
                 resultOn = false;
                 numberInput.Text = "";
+                errorOn = false;
             }
             numberInput.Text += "2";
         }
         private void ThreePressed(object sender, RoutedEventArgs e)
         {
-            if (resultOn)
+            if (resultOn || errorOn)
             {
                 resultOn = false;
                 numberInput.Text = "";
+                errorOn = false;
             }
             numberInput.Text += "3";
         }
         private void ZeroPressed(object sender, RoutedEventArgs e)
         {
-            if (resultOn)
+            if (resultOn || errorOn)
             {
                 resultOn = false;
                 numberInput.Text = "";
+                errorOn = false;
             }
             numberInput.Text += "0";
         }
         private void DecimalPressed(object sender, RoutedEventArgs e)
         {
-            if (resultOn)
+            if (resultOn || errorOn)
             {
                 resultOn = false;
+                errorOn = false;
                 numberInput.Text = "";
             }
             numberInput.Text += ".";
@@ -141,6 +153,7 @@ namespace CalculatorApp
             catch
             {
                 numberInput.Text = "ERROR";
+                errorOn = true;
             }
         }
         private void MinusPressed(object sender, RoutedEventArgs e)
@@ -154,6 +167,7 @@ namespace CalculatorApp
             catch
             {
                 numberInput.Text = "ERROR";
+                errorOn = true;
             }
         }
         private void MultiplyPressed(object sender, RoutedEventArgs e)
@@ -167,6 +181,7 @@ namespace CalculatorApp
             catch
             {
                 numberInput.Text = "ERROR";
+                errorOn = true;
             }
         }
         private void DividePressed(object sender, RoutedEventArgs e)
@@ -180,6 +195,7 @@ namespace CalculatorApp
             catch
             {
                 numberInput.Text = "ERROR";
+                errorOn = true;
             }
         }
         private void EqualsPressed(object sender, RoutedEventArgs e)
@@ -209,6 +225,7 @@ namespace CalculatorApp
             catch
             {
                 numberInput.Text = "ERROR";
+                errorOn = true;
             }
         }
     }
