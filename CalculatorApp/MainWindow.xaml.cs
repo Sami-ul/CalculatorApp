@@ -60,7 +60,7 @@ namespace CalculatorApp
                 numberInput.Text = "";
                 errorOn = false;
             }
-            numberInput.Text += "8";
+            numberInput.Text += "9";
         }
         private void FourPressed(object sender, RoutedEventArgs e)
         {
