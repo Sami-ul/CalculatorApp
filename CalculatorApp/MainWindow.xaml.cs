@@ -131,28 +131,56 @@ namespace CalculatorApp
             numberInput.Text += ".";
         }
         private void PlusPressed(object sender, RoutedEventArgs e)
-        { 
-            n1 = float.Parse(numberInput.Text);
-            numberInput.Text = "";
-            operation = "+";
+        {
+            try
+            {
+                n1 = float.Parse(numberInput.Text);
+                numberInput.Text = "";
+                operation = "+";
+            }
+            catch
+            {
+                numberInput.Text = "ERROR";
+            }
         }
         private void MinusPressed(object sender, RoutedEventArgs e)
         {
-            n1 = float.Parse(numberInput.Text);
-            numberInput.Text = "";
-            operation = "-";
+            try
+            {
+                n1 = float.Parse(numberInput.Text);
+                numberInput.Text = "";
+                operation = "-";
+            }
+            catch
+            {
+                numberInput.Text = "ERROR";
+            }
         }
         private void MultiplyPressed(object sender, RoutedEventArgs e)
         {
-            n1 = float.Parse(numberInput.Text);
-            numberInput.Text = "";
-            operation = "*";
+            try
+            {
+                n1 = float.Parse(numberInput.Text);
+                numberInput.Text = "";
+                operation = "*";
+            }
+            catch
+            {
+                numberInput.Text = "ERROR";
+            }
         }
         private void DividePressed(object sender, RoutedEventArgs e)
         {
-            n1 = float.Parse(numberInput.Text);
-            numberInput.Text = "";
-            operation = "/";
+            try
+            {
+                n1 = float.Parse(numberInput.Text);
+                numberInput.Text = "";
+                operation = "/";
+            }
+            catch
+            {
+                numberInput.Text = "ERROR";
+            }
         }
         private void EqualsPressed(object sender, RoutedEventArgs e)
         {
@@ -177,7 +205,8 @@ namespace CalculatorApp
                 }
                 numberInput.Text = Convert.ToString(result);
                 resultOn = true;
-            } catch
+            }
+            catch
             {
                 numberInput.Text = "ERROR";
             }
