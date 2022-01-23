@@ -35,7 +35,7 @@
             <RowDefinition
                 Height="1*" />
             <RowDefinition
-                Height="2.5*" />
+                Height="4*" />
         </Grid.RowDefinitions>
         <TextBox
             x:Name="numberInput"
@@ -199,11 +199,11 @@
                 Grid.Row="1"
                 Margin="10, 10, 10, 10">
                 <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
                 <Button
                     x:Name="plus"
@@ -277,7 +277,7 @@
                     x:Name="equals"
                     Content="="
                     FontSize="70"
-                    Margin="0,0,0,10"
+                    Margin="0,0,0,0"
                     Grid.Row="4"
                     Background="#607196"
                     Click="EqualsPressed">
