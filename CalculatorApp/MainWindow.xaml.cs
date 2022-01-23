@@ -201,31 +201,34 @@ namespace CalculatorApp
         private void EqualsPressed(object sender, RoutedEventArgs e)
         {
             float result = 0;
-            try
+            if (!resultOn)
             {
-                n2 = float.Parse(numberInput.Text);
-                switch (operation)
+                try
                 {
-                    case "+":
-                        result = n1 + n2;
-                        break;
-                    case "-":
-                        result = n1 - n2;
-                        break;
-                    case "*":
-                        result = n1 * n2;
-                        break;
-                    case "/":
-                        result = n1 / n2;
-                        break;
+                    n2 = float.Parse(numberInput.Text);
+                    switch (operation)
+                    {
+                        case "+":
+                            result = n1 + n2;
+                            break;
+                        case "-":
+                            result = n1 - n2;
+                            break;
+                        case "*":
+                            result = n1 * n2;
+                            break;
+                        case "/":
+                            result = n1 / n2;
+                            break;
+                    }
+                    numberInput.Text = Convert.ToString(result);
+                    resultOn = true;
                 }
-                numberInput.Text = Convert.ToString(result);
-                resultOn = true;
-            }
-            catch
-            {
-                numberInput.Text = "ERROR";
-                errorOn = true;
+                catch
+                {
+                    numberInput.Text = "ERROR";
+                    errorOn = true;
+                }
             }
         }
     }
