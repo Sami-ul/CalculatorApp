@@ -10,6 +10,26 @@
     Height="700"
     Width="800"
     Background="#E8E9ED">
+    <Window.Resources>
+        <Style
+            TargetType="Button"
+            x:Key="RoundedButtonStyle">
+            <Setter
+                Property="FontSize"
+                Value="65" />
+            <Style.Resources>
+                <Style
+                    TargetType="Border">
+                    <Setter
+                        Property="CornerRadius"
+                        Value="20" />
+                    <Setter
+                        Property="Margin"
+                        Value="10,10,10,10" />
+                </Style>
+            </Style.Resources>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition
@@ -59,200 +79,101 @@
                 <Button
                     x:Name="seven"
                     Content="7"
-                    FontSize="65"
-                    Margin="10,10,10,10"
                     Grid.Row="0"
                     Grid.Column="0"
                     Background="#BABFD1"
-                    Click="SevenPressed">
-                    <Button.Resources>
-                        <Style
-                            TargetType="{x:Type Border}">
-                            <Setter
-                                Property="CornerRadius"
-                                Value="20" />
-                        </Style>
-                    </Button.Resources>
+                    Click="SevenPressed"
+                    Style="{StaticResource RoundedButtonStyle}">
                 </Button>
                 <Button
                     x:Name="eight"
                     Content="8"
-                    FontSize="65"
-                    Margin="10,10,10,10"
                     Grid.Row="0"
                     Grid.Column="1"
                     Background="#BABFD1"
-                    Click="EightPressed">
-                    <Button.Resources>
-                        <Style
-                            TargetType="{x:Type Border}">
-                            <Setter
-                                Property="CornerRadius"
-                                Value="20" />
-                        </Style>
-                    </Button.Resources>
+                    Click="EightPressed"
+                    Style="{StaticResource RoundedButtonStyle}">
                 </Button>
                 <Button
                     x:Name="nine"
                     Content="9"
-                    FontSize="65"
-                    Margin="10,10,10,10"
                     Grid.Row="0"
                     Grid.Column="2"
                     Background="#BABFD1"
-                    Click="NinePressed">
-                    <Button.Resources>
-                        <Style
-                            TargetType="{x:Type Border}">
-                            <Setter
-                                Property="CornerRadius"
-                                Value="20" />
-                        </Style>
-                    </Button.Resources>
+                    Click="NinePressed"
+                    Style="{StaticResource RoundedButtonStyle}">
                 </Button>
                 <Button
                     x:Name="four"
                     Content="4"
-                    FontSize="65"
-                    Margin="10,10,10,10"
                     Grid.Row="1"
                     Grid.Column="0"
                     Background="#BABFD1"
-                    Click="FourPressed">
-                    <Button.Resources>
-                        <Style
-                            TargetType="{x:Type Border}">
-                            <Setter
-                                Property="CornerRadius"
-                                Value="20" />
-                        </Style>
-                    </Button.Resources>
+                    Click="FourPressed"
+                    Style="{StaticResource RoundedButtonStyle}">
                 </Button>
                 <Button
                     x:Name="five"
                     Content="5"
-                    FontSize="65"
-                    Margin="10,10,10,10"
                     Grid.Row="1"
                     Grid.Column="1"
                     Background="#BABFD1"
-                    Click="FivePressed">
-                    <Button.Resources>
-                        <Style
-                            TargetType="{x:Type Border}">
-                            <Setter
-                                Property="CornerRadius"
-                                Value="20" />
-                        </Style>
-                    </Button.Resources>
+                    Click="FivePressed"
+                    Style="{StaticResource RoundedButtonStyle}">
                 </Button>
                 <Button
                     x:Name="six"
                     Content="6"
-                    FontSize="65"
-                    Margin="10,10,10,10"
                     Grid.Row="1"
                     Grid.Column="2"
                     Background="#BABFD1"
-                    Click="SixPressed">
-                    <Button.Resources>
-                        <Style
-                            TargetType="{x:Type Border}">
-                            <Setter
-                                Property="CornerRadius"
-                                Value="20" />
-                        </Style>
-                    </Button.Resources>
+                    Click="SixPressed"
+                    Style="{StaticResource RoundedButtonStyle}">
                 </Button>
                 <Button
                     x:Name="one"
                     Content="1"
-                    FontSize="65"
-                    Margin="10,10,10,10"
                     Grid.Row="2"
                     Grid.Column="0"
                     Background="#BABFD1"
-                    Click="OnePressed">
-                    <Button.Resources>
-                        <Style
-                            TargetType="{x:Type Border}">
-                            <Setter
-                                Property="CornerRadius"
-                                Value="20" />
-                        </Style>
-                    </Button.Resources>
+                    Click="OnePressed"
+                    Style="{StaticResource RoundedButtonStyle}">
                 </Button>
                 <Button
                     x:Name="two"
                     Content="2"
-                    FontSize="65"
-                    Margin="10,10,10,10"
                     Grid.Row="2"
                     Grid.Column="1"
                     Background="#BABFD1"
-                    Click="TwoPressed">
-                    <Button.Resources>
-                        <Style
-                            TargetType="{x:Type Border}">
-                            <Setter
-                                Property="CornerRadius"
-                                Value="20" />
-                        </Style>
-                    </Button.Resources>
+                    Click="TwoPressed"
+                    Style="{StaticResource RoundedButtonStyle}">
                 </Button>
                 <Button
                     x:Name="three"
                     Content="3"
-                    FontSize="65"
-                    Margin="10,10,10,10"
                     Grid.Row="2"
                     Grid.Column="2"
                     Background="#BABFD1"
-                    Click="ThreePressed">
-                    <Button.Resources>
-                        <Style
-                            TargetType="{x:Type Border}">
-                            <Setter
-                                Property="CornerRadius"
-                                Value="20" />
-                        </Style>
-                    </Button.Resources>
+                    Click="ThreePressed"
+                    Style="{StaticResource RoundedButtonStyle}">
                 </Button>
                 <Button
                     x:Name="zero"
                     Content="0"
-                    FontSize="65"
-                    Margin="10,10,10,10"
                     Grid.Row="3"
                     Grid.Column="1"
                     Background="#BABFD1"
-                    Click="ZeroPressed">
-                    <Button.Resources>
-                        <Style
-                            TargetType="{x:Type Border}">
-                            <Setter
-                                Property="CornerRadius"
-                                Value="20" />
-                        </Style>
-                    </Button.Resources>
+                    Click="ZeroPressed"
+                    Style="{StaticResource RoundedButtonStyle}">
                 </Button>
                 <Button
                     x:Name="decimal"
                     Content="."
-                    FontSize="65"
-                    Margin="10,10,10,10"
                     Grid.Row="3"
                     Grid.Column="2"
                     Background="#BABFD1"
-                    Click="DecimalPressed">
-                    <Button.Resources>
-                        <Style
-                            TargetType="{x:Type Border}">
-                            <Setter
-                                Property="CornerRadius"
-                                Value="20" />
-                        </Style>
-                    </Button.Resources>
+                    Click="DecimalPressed"
+                    Style="{StaticResource RoundedButtonStyle}">
                 </Button>
                 <Button
                     x:Name="clear"
